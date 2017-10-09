@@ -1,0 +1,6 @@
+.work a,
+.work a:visited {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+  border-image-slice: 1;
+}
