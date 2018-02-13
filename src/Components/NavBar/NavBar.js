@@ -11,7 +11,7 @@ class NavBar extends Component {
     render() {
         let pages = ['home', 'about', 'work', 'contact'];
         return (
-            <div className='navigation'>
+            <nav className='navigation'>
                 <span className='my-name'><Link to='/'>bryan smith</Link></span>
                 <ul className='pages'>
                     {pages.map(page => {
@@ -23,8 +23,11 @@ class NavBar extends Component {
                             </li>
                         )
                     })}
+                    <li>
+                        <a href={`https://www.frontamentals.com`}>blog</a>
+                    </li>
                 </ul>
-            </div>
+            </nav>
         );
     }
 }
