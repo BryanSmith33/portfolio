@@ -1,36 +1,36 @@
 @font-face {
   font-family: 'Above Demo';
-  src: url('/fonts/above.woff') format('woff');
+  src: url('../fonts/above.woff') format('woff');
 }
 
 @font-face {
   font-family: 'bromello';
-  src: url('/fonts/bromello.woff') format('woff');
+  src: url('../fonts/bromello.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Capsule X Pro Medium';
-  src: url('/fonts/capsule.woff') format('woff');
+  src: url('../fonts/capsule.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Cursus';
-  src: url('/fonts/cursus.woff') format('woff');
+  src: url('../fonts/cursus.woff') format('woff');
 }
 
 @font-face {
   font-family: 'GoodMorningAfternoon';
-  src: url('/fonts/goodmorning.woff') format('woff');
+  src: url('../fonts/goodmorning.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Hey Now';
-  src: url('/fonts/basterds.woff') format('woff');
+  src: url('../fonts/basterds.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Permanent Marker';
-  src: url('/fonts/permanentmarker.woff') format('woff');
+  src: url('../fonts/permanentmarker.woff') format('woff');
 }
 
 html {
@@ -276,7 +276,7 @@ html {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  background: #f8f8f8;
+  background: #f6f6f6;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

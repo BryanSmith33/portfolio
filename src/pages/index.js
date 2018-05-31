@@ -1,14 +1,27 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
+import { updateFontFamily } from '../helpers/setNavFont'
+import Hero from '../components/Hero'
+import About from '../components/About'
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-    <Link to="/page-3/">Go to page 3</Link>
-  </div>
-)
+class IndexPage extends Component {
+  componentDidMount() {
+    const id = document.getElementById('name');
+    updateFontFamily(id);
+  }
+  render() {
+    return (
+      <div>
+        <Helmet>
+          <title>Bryan Smith | Salt Lake City Web Developer & Designer</title>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="description" content="This is an example of a meta description. This will often show up in search results." />
+        </Helmet>
+        <Hero />
+        <About />
+      </div>
+    );
+  }
+}
 
 export default IndexPage
