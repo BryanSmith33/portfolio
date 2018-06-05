@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { updateFontFamily } from '../helpers/setNavFont'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Work from '../components/Work'
 
 class IndexPage extends Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ class IndexPage extends Component {
         </Helmet>
         <Hero />
         <About />
+        <Work />
       </div>
     );
   }
