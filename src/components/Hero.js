@@ -9,29 +9,25 @@ const HeroContainer = styled.div`
   height: 75vh;
 `
 const StyledSVG = styled.svg`
-  width: 100%;
-  height: inherit;
-    width: 100%;
-  height: 200px;
+  width: 600px;
+  height: 375px;
   position: absolute;
   z-index: 1;
-  margin-top: 35px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 const Alpha = styled.rect`
   fill: rgba(255, 255, 255, 0.8);
-  -webkit-animation: fadeIn ease-in 1;
-  -moz-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
+  width: 600px;
+  height: 500px;
 `
 const StyledText = styled.text`
   text-anchor: middle;
-  font-size: 5em;
+  font-size: 6em;
+  @media (max-width: 500px) {
+    font-size: 5em;
+  }
 `
 const HeroImage = styled.div`
     background: url(${heroImg}) no-repeat top center;
@@ -41,20 +37,22 @@ const HeroImage = styled.div`
     min-height: 100%;
 `
 const Base = styled.rect`
-  fill: #000;
+  fill: #FFF;
   mask: url(#mask);
-`;
+  width: 100%;
+  `;
 
 const Hero = () => (
   <HeroContainer>
     <StyledSVG>
       <defs>
         <mask id="mask" x="0" y="0" width="100%" height="100%" >
-          <Alpha x="0" y="0" width="100%" height="100%" />
-          <StyledText id="name" x="50%" y="65%">Bryan Smith</StyledText>
+          <Alpha x="0" y="0" />
+          <StyledText id="name" x="50%" y="50%">Bryan</StyledText>
+          <StyledText id="name" x="50%" y="75%">Smith</StyledText>
         </mask>
       </defs>
-      <Base id="base" x="0" y="0" width="100%" height="100%" />
+      <Base id="base" x="0" y="0" />
     </StyledSVG>
     <HeroImage></HeroImage>
   </HeroContainer>

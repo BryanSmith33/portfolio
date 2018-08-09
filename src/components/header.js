@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import { updateFontFamily } from '../helpers/setNavFont'
 
 const Nav = styled.nav`
   background:rgba(15, 13, 16, .90);
   padding:1rem 1.0875rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: fixed;
   z-index: 2;
@@ -20,10 +20,23 @@ const NavLinks = styled.ul`
   margin: 0;
 `
 
-const NavLink = styled.li`
+const NavLink = styled(Link)`
   margin: 0;
   padding: 0 .5em;
   color: #fff;
+  transition: color 1s;
+  &:hover {
+    color: #ff8686;
+  }
+`
+const ExternalLink = styled.a`
+  margin: 0;
+  padding: 0 .5em;
+  color: #fff;
+  transition: color 1s;
+  &:hover {
+    color: #ff8686;
+  }
 `
 const Header = ({ siteTitle }) => (
   < Nav >
@@ -33,15 +46,15 @@ const Header = ({ siteTitle }) => (
         style={{
           color: 'white',
           textDecoration: 'none',
+          fontSize: '1.6em'
         }}>
         {siteTitle}
       </Link>
     </span>
     <NavLinks>
-      <NavLink>About</NavLink>
-      <NavLink>Work</NavLink>
-      <NavLink>Contact</NavLink>
-      <NavLink>Blog</NavLink>
+      <NavLink to={`/work`} activeClassName="active">Work</NavLink>
+      <NavLink to={`/contact`} activeClassName="active">Contact</NavLink>
+      <ExternalLink target='_blank' href='https://frontamentals.com/' rel="noopener noreferrer">Blog</ExternalLink>
     </NavLinks>
   </Nav >
 )

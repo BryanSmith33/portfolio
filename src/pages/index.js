@@ -4,13 +4,15 @@ import { updateFontFamily } from '../helpers/setNavFont'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Work from '../components/Work'
+import Learn from '../components/Learn'
 
 class IndexPage extends Component {
   componentDidMount() {
-    const id = document.getElementById('name');
+    const id = document.querySelectorAll('#name');
     updateFontFamily(id);
   }
   render() {
+    console.log(this.props.data);
     return (
       <div>
         <Helmet>
@@ -19,11 +21,22 @@ class IndexPage extends Component {
           <meta name="description" content="This is an example of a meta description. This will often show up in search results." />
         </Helmet>
         <Hero />
-        <About />
+        <About myMug={this.props.data} />
         <Work />
+        <Learn />
       </div>
     );
   }
 }
 
 export default IndexPage
+
+export const imgQuery = graphql`
+  query imgQuery {
+    test: imageSharp(id: { regex: "/frontamentals/" }) {
+      resolutions( width: 300) {
+          ...GatsbyImageSharpResolutions
+        }
+    }
+  }
+`
