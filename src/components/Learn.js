@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import image from '../images/frontamentals.png'
-import { FormButton } from './uiComponents'
+import { Form, Field, Input, Label, FormButton } from './uiComponents'
 
 const LearnContainer = styled.div`
   padding: 3em;
@@ -15,29 +14,6 @@ const TextContainer = styled.div`
   margin: 0 auto;
   position: relative;
   z-index: 1;
-`
-const FrontamentalsCol = styled.img`
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  margin: 0;
-  opacity: .2;
-`
-const SubscribeForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  margin: 0 auto 26px;
-  @media (max-width: 800px) {
-    width: initial;
-  }
-`
-const FormInput = styled.input`
-  width: 100%;
-  margin: 10px 0;
-  border: 1px solid #666;
-  border-radius: 3px;
 `
 class Learn extends Component {
   state = {
@@ -59,18 +35,24 @@ class Learn extends Component {
     return (
       <LearnContainer>
         <TextContainer>
-          <h1>Learn from me/With me</h1>
+          <h1>Learn from/with me</h1>
           <h3>I know, I know... <span role='image' aria-label='newspaper'>📰 </span><span role='image' aria-label='right arrow'> ➡️ </span><span role='image' aria-label='trash bin'>🗑</span></h3>
           <p> But if you are wanting to learn web development without any fluff or BS tutorials, then I've got something for you.</p>
           <p>I write up fresh web development articles (sometimes once a week if the children allow!!!) and you can get updated anytime I write something new by dropping your email in that there <span role='image' aria-label='point down'>👇</span> box and clicking "SEND ME THE GOODS!" </p>
-          <SubscribeForm onSubmit={(e) => this.handleSubmit(e)}>
-            <FormInput type="text" placeholder='first name' name="first_name" />
-            <FormInput type="email" placeholder='email' name="email" />
+          <Form onSubmit={(e) => this.handleSubmit(e)}
+            margin={`0 auto 1.5em`}>
+            <Field>
+              <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" required />
+              <Label for="fullname">Name</Label>
+            </Field>
+            <Field>
+              <Input type="email" name="email" placeholder="youare@awesome.com" required />
+              <Label for="email">Email</Label>
+            </Field>
             <FormButton>{this.state.subscribeMessage}</FormButton>
-          </SubscribeForm>
+          </Form>
           <p>P.S. I promise to never, ever spam you. So what do you say? Let's be internet friends <span role='image' aria-label='heart'>❤️</span><span role='image' aria-label='heart'>💚</span><span role='image' aria-label='heart'>💜</span></p>
         </TextContainer>
-        <FrontamentalsCol src={image} />
       </LearnContainer>
     )
   }

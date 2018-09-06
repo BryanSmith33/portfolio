@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormButton, Container, Title } from '../components/uiComponents'
+import { FormButton, Container, Title, Form, Field, Input, Label, TextArea } from '../components/uiComponents'
 
 const FaqContainer = styled.div`
-  color: #bb5847;
+  color: #ff684e;
   margin-right: 2em;
   width: 400px;
   @media (max-width: 800px) {
@@ -18,61 +18,6 @@ const AMA = styled.span`
     font-size: 2.3em;
   }
 `
-const Form = styled.form`
-  @media (max-width: 800px) {
-    width: 100%;
-  }
-`
-const Field = styled.div`
-  display: flex;
-  flex-flow: column-reverse;
-  margin-bottom: 1em;
-`
-const Input = styled.input`
-  width: 200px;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-  font-family: inherit;
-  -webkit-appearance: none;
-  border-radius: 0;
-  padding: 0;
-  cursor: text;
-  transition: all 0.2s;
-  z-index: 2;
-  background: transparent;
-  &::-webkit-input-placeholder {
-    opacity: 0;
-    transition: inherit;
-  }
-  &:focus::-webkit-input-placeholder {
-    opacity: 1;
-    color: #ccc;
-  }
-  &:focus{
-    outline: 0;
-    border-bottom: 1px solid #666;
-  }
-  &:focus ~ label,
-  &:valid ~ label,
-  &:not(:placeholder-shown) + label{
-    top: 0px;
-    font-size: .8em;
-  }
-  `
-const Label = styled.label`
-  text-transform: uppercase;
-  transition: all 0.2s;
-  position: relative;
-  top: 27px;
-`
-const TextArea = styled.textarea`
-  height: 200px;
-  width: 300px;
-  background: transparent;
-  @media (max-width: 800px) {
-    width: 100%;
-  }
-`
 
 const Contact = () => (
   <Container>
@@ -84,7 +29,7 @@ const Contact = () => (
         <li>Favorit Color: red</li>
         <li>Favorite Food: carne asada burrito</li>
         <li>Years Developing: {new Date().getFullYear() - 2014}</li>
-        <li>Cats or Dogs: Dogs</li>
+        <li>Cats or Dogs: dogs</li>
         <li>Favorite sport: Football to watch, skateboarding to do</li>
         <li>Height: 6'1"</li>
         <li>Greatest Fear: Being chased up the stairs in the dark</li>
@@ -92,7 +37,7 @@ const Contact = () => (
         <li>Tattoos: 4</li>
       </ul>
     </FaqContainer>
-    <Form>
+    <Form margin={`initial`}>
       <Field>
         <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" required />
         <Label for="fullname">Name</Label>

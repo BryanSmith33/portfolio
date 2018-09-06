@@ -51,6 +51,7 @@ const StyledImg = styled(Img)`
   }
   @media (max-width: 550px) {
     align-self: center;
+    margin: 0 0 1em;
   }
 `
 const startYear = 2014

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import heroImg from '../images/patriarchHike.jpg'
+import Img from 'gatsby-image'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -29,12 +29,8 @@ const StyledText = styled.text`
     font-size: 5em;
   }
 `
-const HeroImage = styled.div`
-    background: url(${heroImg}) no-repeat top center;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    min-height: 100%;
+const HeroImage = styled(Img)`
+  width: 100vw;
 `
 const Base = styled.rect`
   fill: #FFF;
@@ -42,20 +38,22 @@ const Base = styled.rect`
   width: 100%;
   `;
 
-const Hero = () => (
-  <HeroContainer>
-    <StyledSVG>
-      <defs>
-        <mask id="mask" x="0" y="0" width="100%" height="100%" >
-          <Alpha x="0" y="0" />
-          <StyledText id="name" x="50%" y="50%">Bryan</StyledText>
-          <StyledText id="name" x="50%" y="75%">Smith</StyledText>
-        </mask>
-      </defs>
-      <Base id="base" x="0" y="0" />
-    </StyledSVG>
-    <HeroImage></HeroImage>
-  </HeroContainer>
-)
+const Hero = ({ background }) => {
+  return (
+    <HeroContainer>
+      <StyledSVG>
+        <defs>
+          <mask id="mask" x="0" y="0" width="100%" height="100%" >
+            <Alpha x="0" y="0" />
+            <StyledText id="fname" x="50%" y="50%">Bryan</StyledText>
+            <StyledText id="lname" x="50%" y="75%">Smith</StyledText>
+          </mask>
+        </defs>
+        <Base id="base" x="0" y="0" />
+      </StyledSVG>
+      <HeroImage sizes={background.sizes} />
+    </HeroContainer>
+  )
+}
 
 export default Hero
