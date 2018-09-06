@@ -1,36 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
 @font-face {
   font-family: 'Above Demo';
+  font-display: auto;
   src: url('../fonts/above.woff') format('woff');
 }
 
 @font-face {
   font-family: 'bromello';
+  font-display: auto;
   src: url('../fonts/bromello.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Capsule X Pro Medium';
+  font-display: auto;
   src: url('../fonts/capsule.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Cursus';
+  font-display: auto;
   src: url('../fonts/cursus.woff') format('woff');
 }
 
 @font-face {
   font-family: 'GoodMorningAfternoon';
+  font-display: auto;
   src: url('../fonts/goodmorning.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Hey Now';
+  font-display: auto;
   src: url('../fonts/basterds.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Permanent Marker';
+  font-display: auto;
   src: url('../fonts/permanentmarker.woff') format('woff');
 }
 
