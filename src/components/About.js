@@ -42,7 +42,6 @@ const Title = styled.h1`
   }
 `
 const StyledImg = styled(Img)`
-  height: 340px;
   margin: 0 1.5em 1em;
   border-radius: 50%;
   float: right;

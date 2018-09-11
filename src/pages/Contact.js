@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FormButton, Container, Title, Form, Field, Input, Label, TextArea } from '../components/uiComponents'
+import Helmet from 'react-helmet'
 
 const FaqContainer = styled.div`
   color: #ff684e;
@@ -21,6 +22,13 @@ const AMA = styled.span`
 
 const Contact = () => (
   <Container>
+    <Helmet
+      title='Contact | Bryan Smith Salt Lake City Web Developer & Designer'
+      meta={[
+        { name: 'description', content: 'Contact Bryan Smith' },
+        { name: 'keywords', content: 'web developer, designer, freelance, design, salt lake city, utah' },
+      ]}
+    />
     <FaqContainer>
       <Title>Go ahead, <br /> <AMA>AMA</AMA></Title>
       <p>That's Ask Me Anything incase you didn't know. Here are a few quick facts about me just in case it answers any questions you might have:</p>
@@ -37,13 +45,13 @@ const Contact = () => (
         <li>Tattoos: 4</li>
       </ul>
     </FaqContainer>
-    <Form margin={`initial`}>
+    <Form margin={`initial`} netlify>
       <Field>
-        <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" required />
+        <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" id='fullname' required />
         <Label for="fullname">Name</Label>
       </Field>
       <Field>
-        <Input type="email" name="email" placeholder="youare@awesome.com" required />
+        <Input type="email" name="email" placeholder="youare@awesome.com" id='email' required />
         <Label for="email">Email</Label>
       </Field>
       <Field>

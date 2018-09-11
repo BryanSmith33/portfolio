@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import Footer from '../components/Footer'
 import './index.css'
 import favicon from '../images/favicon.png'
 
@@ -23,6 +24,7 @@ const Layout = ({ children, data }) => (
     <div>
       {children()}
     </div>
+    <Footer />
   </div>
 )
 

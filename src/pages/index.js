@@ -12,6 +12,7 @@ class IndexPage extends Component {
     updateFontFamily(id);
   }
   render() {
+    const { hero, me } = this.props.data
     return (
       <div>
         <Helmet>
@@ -19,8 +20,8 @@ class IndexPage extends Component {
           <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="description" content="This is an example of a meta description. This will often show up in search results." />
         </Helmet>
-        <Hero background={this.props.data.hero}/>
-        <About myMug={this.props.data.me} />
+        <Hero background={hero} />
+        <About myMug={me} />
         <Work />
         <Learn />
       </div>
@@ -34,13 +35,13 @@ export const imgQuery = graphql`
   query imgQuery {
     me: imageSharp(id: { regex: "/yo_boy_cropped/" }) {
       resolutions( width: 260, height: 260) {
-          ...GatsbyImageSharpResolutions
-        }
+        ...GatsbyImageSharpResolutions
+      }
     }
     hero: imageSharp(id: { regex: "/patriarchHike/" }) {
       sizes( maxWidth: 1400) {
-          ...GatsbyImageSharpSizes
-        }
+        ...GatsbyImageSharpSizes
+      }
     }
   }
 `
