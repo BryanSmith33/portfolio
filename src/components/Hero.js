@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Img from 'gatsby-image'
 
 const HeroContainer = styled.div`
@@ -7,14 +7,27 @@ const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 75vh;
+  @media (max-width: 800px) {
+    height: initial;
+  }
+`
+const FadeIn = keyframes`
+  from {
+      opacity: 0
+  }
+  to {
+      opacity: 1
+  }
 `
 const StyledSVG = styled.svg`
   width: 600px;
   height: 375px;
   position: absolute;
   z-index: 1;
-  @media (max-width: 600px) {
-    width: 100%;
+  animation: ${FadeIn} ease-in 1;
+  animation-duration: 2s;
+  @media (max-width: 599px) {
+    width: initial;
   }
 `
 const Alpha = styled.rect`
@@ -22,6 +35,7 @@ const Alpha = styled.rect`
   width: 600px;
   height: 500px;
 `
+
 const StyledText = styled.text`
   text-anchor: middle;
   font-size: 6em;
@@ -31,6 +45,9 @@ const StyledText = styled.text`
 `
 const HeroImage = styled(Img)`
   width: 100vw;
+  @media (max-width: 500px) {
+    height: 350px;
+  }
 `
 const Base = styled.rect`
   fill: #FFF;

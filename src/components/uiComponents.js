@@ -92,7 +92,7 @@ const TextArea = styled.textarea`
 `
 const FormButton = styled.button`
   border: none;
-  box-shadow: 0px 4px 0px #7d7b7b;
+  box-shadow: 0px 4px 0px #9f0000;
   cursor: pointer;
   border-radius: 3px;
   text-transform: capitalize;
@@ -100,7 +100,7 @@ const FormButton = styled.button`
   height: 60px;
   margin: 10px auto;
   font-size: 18px;
-  background: #4b4b4b;
+  background: #dd2828;
   color: #fff;
   text-transform: uppercase;
   &:active {
