@@ -45,7 +45,7 @@ const Contact = () => (
         <li>Tattoos: 4</li>
       </ul>
     </FaqContainer>
-    <Form margin={`initial`} netlify>
+    <Form margin={`initial`} netlify name='ama' method="POST">
       <Field>
         <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" id='fullname' required />
         <Label for="fullname">Name</Label>
