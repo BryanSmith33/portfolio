@@ -45,7 +45,7 @@ const Contact = () => (
         <li>Tattoos: 4</li>
       </ul>
     </FaqContainer>
-    <Form margin={`initial`} netlify name='ama' method="POST">
+    <Form margin={`initial`} data-netlify="true" data-netlify-honeypot="bot-field" name='ama'>
       <Field>
         <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" id='fullname' required />
         <Label for="fullname">Name</Label>
