@@ -38,7 +38,7 @@ const Contact = () => (
         {
           name: 'keywords',
           content:
-            'web developer, designer, freelance, design, salt lake city, utah',
+            'web developer, designer, freelance, design, salt lake city, Utah',
         },
       ]}
     />
