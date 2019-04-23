@@ -66,8 +66,9 @@ const Contact = () => (
     <Form
       margin={`initial`}
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
       name="ama"
+      method="POST"
+      action="/Success"
     >
       <Field>
         <Input
