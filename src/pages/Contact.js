@@ -67,13 +67,17 @@ const Contact = () => (
       </FaqContainer>
       <Form
         margin={`initial`}
-        data-netlify="true"
         name="ama"
         method="POST"
         action="/Success"
-        data-netlify-honeypot="bot-field"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="bot-field" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="ama"
+        />
         <Field>
           <Input
             type="text"
