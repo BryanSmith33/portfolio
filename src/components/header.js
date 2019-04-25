@@ -1,17 +1,17 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import React from "react"
+import Link from "gatsby-link"
+import styled from "styled-components"
 
 const Nav = styled.nav`
-  background:rgba(15, 13, 16, .90);
-  padding:1rem 1.0875rem;
+  background: rgba(15, 13, 16, 0.9);
+  padding: 1rem 1.0875rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   position: fixed;
   z-index: 2;
-  font-family: 'Capsule X Pro Medium';
+  font-family: "Capsule X Pro Medium";
 `
 
 const NavLinks = styled.ul`
@@ -22,7 +22,7 @@ const NavLinks = styled.ul`
 
 const NavLink = styled(Link)`
   margin: 0;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   color: #fff;
   transition: color 1s;
   &:hover {
@@ -31,7 +31,7 @@ const NavLink = styled(Link)`
 `
 const ExternalLink = styled.a`
   margin: 0;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   color: #fff;
   transition: color 1s;
   &:hover {
@@ -39,24 +39,35 @@ const ExternalLink = styled.a`
   }
 `
 const Header = ({ siteTitle }) => (
-  < Nav >
+  <Nav>
     <span>
       <Link
         to="/"
         style={{
-          color: 'white',
-          textDecoration: 'none',
-          fontSize: '1.6em'
-        }}>
+          color: "white",
+          textDecoration: "none",
+          fontSize: "1.6em",
+        }}
+      >
         {siteTitle}
       </Link>
     </span>
     <NavLinks>
-      <NavLink to={`/work`} activeClassName="active">Work</NavLink>
-      <NavLink to={`/contact`} activeClassName="active">Contact</NavLink>
-      <ExternalLink target='_blank' href='https://frontamentals.com/' rel="noopener noreferrer">Blog</ExternalLink>
+      <NavLink to={`/Work`} activeClassName="active">
+        Work
+      </NavLink>
+      <NavLink to={`/Contact`} activeClassName="active">
+        Contact
+      </NavLink>
+      <ExternalLink
+        target="_blank"
+        href="https://frontamentals.com/"
+        rel="noopener noreferrer"
+      >
+        Blog
+      </ExternalLink>
     </NavLinks>
-  </Nav >
+  </Nav>
 )
 
 export default Header

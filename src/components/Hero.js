@@ -1,6 +1,6 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import Img from 'gatsby-image'
+import React from "react"
+import styled, { keyframes } from "styled-components"
+import Img from "gatsby-image"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -50,25 +50,29 @@ const HeroImage = styled(Img)`
   }
 `
 const Base = styled.rect`
-  fill: #FFF;
+  fill: #fff;
   mask: url(#mask);
   width: 100%;
-  `;
+`
 
 const Hero = ({ background }) => {
   return (
     <HeroContainer>
       <StyledSVG>
         <defs>
-          <mask id="mask" x="0" y="0" width="100%" height="100%" >
+          <mask id="mask" x="0" y="0" width="100%" height="100%">
             <Alpha x="0" y="0" />
-            <StyledText id="fname" x="50%" y="50%">Bryan</StyledText>
-            <StyledText id="lname" x="50%" y="75%">Smith</StyledText>
+            <StyledText id="fname" x="50%" y="50%">
+              Bryan
+            </StyledText>
+            <StyledText id="lname" x="50%" y="75%">
+              Smith
+            </StyledText>
           </mask>
         </defs>
         <Base id="base" x="0" y="0" />
       </StyledSVG>
-      <HeroImage sizes={background.sizes} />
+      <HeroImage sizes={background.childImageSharp.fluid} />
     </HeroContainer>
   )
 }

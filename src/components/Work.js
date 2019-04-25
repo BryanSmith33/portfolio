@@ -62,10 +62,9 @@ const Work = () => (
     </LineContainer>
     <WorkTextContainer>
       <h1>Work with me</h1>
-      <p>I've been fortunate enough to work for a wide range of companies and with a wide range of technology. If resumes are your thing, feast your eyes on <ExternalLink target='_blank' href={resume} rel="noopener noreferrer">this bad boy</ExternalLink>. Some of the technologies that I am most comofortable with are HTML, CSS, JavaScript (ES6+), React, Angular, Vue, Node and the Adobe Suite along with Sketch for designing. I pride myself on creating user experiences that are not only stunning but highy functional as well and I would be happy to talk to you about any projects you need done or give my thoughts on a project you are currently working on. <InternalLink to={`/contact`}>Feel free to contact me here</InternalLink>.</p>
-      <p>Still not convinced? Check out some of my <InternalLink to={`/work`}>work</InternalLink> and see why companies have chosen me for their projects.</p>
+      <p>I've been fortunate enough to work for a wide range of companies and with a wide range of technology. If resumes are your thing, feast your eyes on <ExternalLink target='_blank' href={resume} rel="noopener noreferrer">this bad boy</ExternalLink>. Some of the technologies that I am most comofortable with are HTML, CSS, JavaScript (ES6+), React, Angular, Vue, Node and the Adobe Suite along with Sketch for designing. I pride myself on creating user experiences that are not only stunning but highy functional as well and I would be happy to talk to you about any projects you need done or give my thoughts on a project you are currently working on. <InternalLink to={`/Contact`}>Feel free to contact me here</InternalLink>.</p>
+      <p>Still not convinced? Check out some of my <InternalLink to={`/Work`}>work</InternalLink> and see why companies have chosen me for their projects.</p>
     </WorkTextContainer>
   </WorkContainer>
 )
-
 export default Work

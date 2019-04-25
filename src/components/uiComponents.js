@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Link from 'gatsby-link'
+import styled from "styled-components"
+import Link from "gatsby-link"
 
 const Container = styled.div`
   height: 100vh;
@@ -22,14 +22,14 @@ const InternalLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+  border-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
   border-image-slice: 1;
-  `
+`
 const ExternalLink = styled.a`
   color: inherit;
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+  border-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
   border-image-slice: 1;
 `
 
@@ -65,17 +65,17 @@ const Input = styled.input`
     opacity: 1;
     color: #ccc;
   }
-  &:focus{
+  &:focus {
     outline: 0;
     border-bottom: 1px solid #666;
   }
   &:focus ~ label,
   &:valid ~ label,
-  &:not(:placeholder-shown) + label{
+  &:not(:placeholder-shown) + label {
     top: 0px;
-    font-size: .8em;
+    font-size: 0.8em;
   }
-  `
+`
 const Label = styled.label`
   text-transform: uppercase;
   transition: all 0.2s;
@@ -111,5 +111,15 @@ const FormButton = styled.button`
   }
 `
 
-
-export { FormButton, Container, Title, InternalLink, ExternalLink, Form, Field, Input, Label, TextArea }
+export {
+  FormButton,
+  Container,
+  Title,
+  InternalLink,
+  ExternalLink,
+  Form,
+  Field,
+  Input,
+  Label,
+  TextArea,
+}
