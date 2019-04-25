@@ -43,11 +43,11 @@ class Learn extends Component {
             margin={`0 auto 1.5em`}>
             <Field>
               <Input type="text" name="fullname" placeholder="Jeffrey Lebowski" id="fullname" required />
-              <Label for="fullname">Name</Label>
+              <Label htmlFor="fullname">Name</Label>
             </Field>
             <Field>
               <Input type="email" name="email" placeholder="youare@awesome.com" id="email" required />
-              <Label for="email">Email</Label>
+              <Label htmlFor="email">Email</Label>
             </Field>
             <FormButton>{this.state.subscribeMessage}</FormButton>
           </Form>

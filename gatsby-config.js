@@ -1,25 +1,41 @@
 module.exports = {
   siteMetadata: {
-    title: 'Bryan Smith',
+    title: `Bryan Smith`,
+    description: `I am a developer, design and leader hailing from Salt Lake City, Utah`,
+    author: `Bryan Smith`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint:
-          'https://frontamentals.us17.list-manage.com/subscribe/post?u=a4a925b2d91aa54f026ee8f4b&amp;id=392f9649f2',
-      },
-    },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `img`,
+        name: `images`,
         path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://frontamentals.us17.list-manage.com/subscribe/post?u=a4a925b2d91aa54f026ee8f4b&amp;id=392f9649f2",
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
