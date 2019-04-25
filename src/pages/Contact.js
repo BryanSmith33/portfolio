@@ -71,7 +71,9 @@ const Contact = () => (
         name="ama"
         method="POST"
         action="/Success"
+        data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="bot-field" />
         <Field>
           <Input
             type="text"
