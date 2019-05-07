@@ -17,14 +17,10 @@ const TextContainer = styled.div`
 `
 class Learn extends Component {
   state = {
-    name: "",
-    email: "",
     subscribeMessage: "SEND ME THE GOODS!",
   }
   handleSubmit(e) {
     e.preventDefault()
-    console.log(e.target.email)
-    console.log(e.target.fullname)
     addToMailchimp(e.target.email.value, {
       FNAME: e.target.fullname.value,
     }).then(data => {
