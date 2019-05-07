@@ -23,6 +23,8 @@ class Learn extends Component {
   }
   handleSubmit(e) {
     e.preventDefault()
+    console.log(e);
+    
     addToMailchimp(e.target.email.value, { FNAME: e.target.first_name.value })
       .then(data => {
         data.msg = "🤩THANK YOU🎉"
