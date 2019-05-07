@@ -6,6 +6,7 @@
   "author": "Bryan Smith <me@imbryan.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "dotenv": "^8.0.0",
     "gatsby": "^2.3.27",
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-mailchimp": "https://github.com/benjaminhoffman/gatsby-plugin-mailchimp.git#gatsby-v2",

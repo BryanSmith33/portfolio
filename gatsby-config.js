@@ -32,7 +32,7 @@ module.exports = {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://frontamentals.us17.list-manage.com/subscribe/post?u=a4a925b2d91aa54f026ee8f4b&amp;id=392f9649f2",
+          process.env.MAILCHIMPAPI || "",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
