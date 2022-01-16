@@ -13,6 +13,11 @@ body {
     font-family: 'Jost', sans-serif;
 }
 
+p {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
 header {
     height: 75px;
     display: flex;
@@ -21,13 +26,12 @@ header {
 }
 
 .intro {
-    padding: 25px 0;;
+    padding: 25px 0;
+    max-width: 1200px;
 }
 
 .intro-title {
     font-size: 2.5rem;
-}
-
-.intro-body {
-    font-size: 1.5rem;
+    max-width: 75%;
+    margin-bottom: 15px;
 }
