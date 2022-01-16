@@ -19,3 +19,15 @@ header {
     align-items: center;
     font-family: 'Pacifico', cursive;
 }
+
+.intro {
+    padding: 25px 0;;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+}
+
+.intro-body {
+    font-size: 1.5rem;
+}
